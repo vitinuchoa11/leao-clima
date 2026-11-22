@@ -391,6 +391,17 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
 .credit a[target]{color:var(--ice);font-weight:600}
 @media (max-width:980px){.area-box{grid-template-columns:1fr}}
 @media (max-width:640px){.loc-btns{grid-template-columns:1fr}.ig-bar{flex-direction:column;text-align:center}.area-box .loc-card,.area-regions{padding:24px}}
+
+/* capa com fotos alternando */
+.slides{position:relative}
+.slides img{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.slides img.on{opacity:1}
+.sl-dots{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
+.sl-dots button{width:8px;height:8px;border-radius:99px;border:0;background:rgba(255,255,255,.55);cursor:pointer;padding:0;transition:.3s}
+.sl-dots button.on{width:24px;background:#fff}
+.card .links{margin-top:auto;display:flex;gap:18px;flex-wrap:wrap}
+.card .links .link{margin-top:0}
+.card .link.more{color:var(--ink)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "De quanto em quanto tempo devo limpar o ar-condicionado?", "acceptedAnswer": {"@type": "Answer", "text": "Para uso residencial, o recomendado é limpar os filtros a cada 15 dias e fazer a higienização completa a cada 6 meses. Em comércios e ambientes de uso intenso, o intervalo deve ser menor."}}, {"@type": "Question", "name": "Quais são os sinais de que o aparelho precisa de limpeza?", "acceptedAnswer": {"@type": "Answer", "text": "Cheiro de mofo ao ligar, água pingando, barulho diferente, sujeira aparente nas aletas ou o ar gelando menos do que antes."}}, {"@type": "Question", "name": "Vocês instalam aparelhos comprados em loja?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Fazemos a instalação de aparelhos novos de todas as principais marcas, com acabamento limpo e seguindo as orientações do fabricante."}}, {"@type": "Question", "name": "Quais marcas vocês atendem?", "acceptedAnswer": {"@type": "Answer", "text": "Trabalhamos com Samsung, LG, Springer, Elgin, Philco, Gree, Midea, Electrolux, Hisense e outras marcas. Informe o modelo no pedido de orçamento."}}, {"@type": "Question", "name": "Preciso estar em casa durante o serviço?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. É preciso que um adulto acompanhe o atendimento e libere o acesso ao aparelho."}}, {"@type": "Question", "name": "O serviço tem garantia?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Os serviços da Leão Clima têm garantia, e o prazo é informado junto com o orçamento."}}, {"@type": "Question", "name": "Como funciona o orçamento?", "acceptedAnswer": {"@type": "Answer", "text": "Envie pelo WhatsApp o serviço desejado, a quantidade de aparelhos e o seu bairro. Respondemos com os valores e o melhor horário para o atendimento."}}, {"@type": "Question", "name": "Quais regiões vocês atendem?", "acceptedAnswer": {"@type": "Answer", "text": "Atendemos Brasília e as regiões administrativas do DF, como Asa Sul, Asa Norte, Águas Claras, Guará, Taguatinga, Lago Sul e muitas outras."}}, {"@type": "Question", "name": "Qual é o horário de atendimento?", "acceptedAnswer": {"@type": "Answer", "text": "De segunda a sexta, das 8h às 18h, e aos sábados, das 8h às 13h. Aos domingos estamos fechados, mas você pode mandar sua mensagem no WhatsApp."}}]}</script>
@@ -465,7 +476,11 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
       </div>
     </div>
     <div class="hero-photo reveal">
-      <div class="frame"><img src="img/hero-conforto.jpg" srcset="img/hero-conforto-p.jpg 800w, img/hero-conforto.jpg 1400w" sizes="(max-width:980px) 100vw, 560px" alt="Mulher relaxando no sofá com o ar-condicionado ligado a 22 graus" width="1400" height="933" fetchpriority="high"></div>
+      <div class="frame slides" id="heroSlides">
+        <img class="on" src="img/hero-conforto.jpg" srcset="img/hero-conforto-p.jpg 800w, img/hero-conforto.jpg 1400w" sizes="(max-width:980px) 100vw, 560px" alt="Mulher relaxando no sofá com o ar-condicionado ligado a 22 graus" width="1400" height="933" fetchpriority="high">
+        <img src="img/capa-suite.jpg" srcset="img/capa-suite-p.jpg 800w, img/capa-suite.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Ar-condicionado Elgin instalado pela Leão Clima em suíte com banheira" width="1280" height="960" loading="lazy" style="object-position:70% center">
+        <div class="sl-dots"><button class="on" aria-label="Foto 1"></button><button aria-label="Foto 2"></button></div>
+      </div>
     </div>
   </div>
 </section>
@@ -491,21 +506,21 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
         <h3>Limpeza e higienização</h3>
         <p>Higienização completa de evaporadora, filtros e turbina, removendo a sujeira acumulada que prejudica o ar e o desempenho.</p>
         <ul><li><svg><use href="#i-check"/></svg>Evaporadora, filtros e turbina</li><li><svg><use href="#i-check"/></svg>Ar mais limpo no ambiente</li></ul>
-        <a class="link" href="https://wa.me/5561992929408?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20limpeza%20e%20higieniza%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir orçamento <svg><use href="#i-arrow"/></svg></a>
+        <div class="links"><a class="link more" href="limpeza-de-ar-condicionado/">Saiba mais <svg><use href="#i-arrow"/></svg></a><a class="link" href="https://wa.me/5561992929408?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20limpeza%20e%20higieniza%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir orçamento <svg><use href="#i-arrow"/></svg></a></div>
       </article>
       <article class="card reveal">
         <div class="ic"><svg><use href="#i-wind"/></svg></div>
         <h3>Instalação profissional</h3>
         <p>Instalação com acabamento limpo e organizado, respeitando o seu ambiente e as orientações do fabricante.</p>
         <ul><li><svg><use href="#i-check"/></svg>Split e inverter</li><li><svg><use href="#i-check"/></svg>Acabamento caprichado</li></ul>
-        <a class="link" href="https://wa.me/5561992929408?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir orçamento <svg><use href="#i-arrow"/></svg></a>
+        <div class="links"><a class="link more" href="instalacao-de-ar-condicionado/">Saiba mais <svg><use href="#i-arrow"/></svg></a><a class="link" href="https://wa.me/5561992929408?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20instala%C3%A7%C3%A3o." target="_blank" rel="noopener">Pedir orçamento <svg><use href="#i-arrow"/></svg></a></div>
       </article>
       <article class="card reveal">
         <div class="ic"><svg><use href="#i-wrench"/></svg></div>
         <h3>Manutenção e conserto</h3>
         <p>Seu ar não gela como antes? Fazemos o diagnóstico e indicamos o reparo certo para o aparelho voltar a funcionar bem.</p>
         <ul><li><svg><use href="#i-check"/></svg>Diagnóstico técnico</li><li><svg><use href="#i-check"/></svg>Manutenção preventiva e corretiva</li></ul>
-        <a class="link" href="https://wa.me/5561992929408?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20manuten%C3%A7%C3%A3o%2Fconserto." target="_blank" rel="noopener">Pedir orçamento <svg><use href="#i-arrow"/></svg></a>
+        <div class="links"><a class="link more" href="manutencao-de-ar-condicionado/">Saiba mais <svg><use href="#i-arrow"/></svg></a><a class="link" href="https://wa.me/5561992929408?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20manuten%C3%A7%C3%A3o%2Fconserto." target="_blank" rel="noopener">Pedir orçamento <svg><use href="#i-arrow"/></svg></a></div>
       </article>
     </div>
   </div>
@@ -705,7 +720,7 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
         <p style="max-width:320px">O gelo que você precisa, a qualidade que merece. Instalação, limpeza e manutenção de ar-condicionado em Brasília e regiões.</p>
         <a class="ig-link" href="https://www.instagram.com/leaoclima.ar/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@leaoclima.ar</a>
       </div>
-      <div><h4>Navegação</h4><ul><li><a href="#servicos">Serviços</a></li><li><a href="#limpeza">Higienização</a></li><li><a href="#trabalhos">Trabalhos realizados</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#regioes">Onde atendemos</a></li><li><a href="#duvidas">Perguntas frequentes</a></li><li><a href="#orcamento">Orçamento</a></li></ul></div>
+      <div><h4>Navegação</h4><ul><li><a href="limpeza-de-ar-condicionado/">Limpeza de ar-condicionado</a></li><li><a href="instalacao-de-ar-condicionado/">Instalação de ar-condicionado</a></li><li><a href="manutencao-de-ar-condicionado/">Manutenção e conserto</a></li><li><a href="#limpeza">Higienização</a></li><li><a href="#trabalhos">Trabalhos realizados</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#regioes">Onde atendemos</a></li><li><a href="#duvidas">Perguntas frequentes</a></li><li><a href="#orcamento">Orçamento</a></li></ul></div>
       <div><h4>Contato</h4><a class="phone" href="https://wa.me/5561992929408" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>(61) 99292-9408</a><p style="margin-top:12px">SHIGS 711 Bloco K Casa 30<br>Asa Sul, Brasília - DF</p><p style="margin-top:12px">Seg a Sex: 8h às 18h<br>Sáb: 8h às 13h · Dom: fechado</p></div>
     </div>
     <div class="copy"><span>© 2026 Leão Clima · Brasília - DF. Todos os direitos reservados.</span><span class="credit"><a href="privacidade.html">Política de Privacidade</a> · Site feito por <a href="https://www.instagram.com/ksrtecnologia/" target="_blank" rel="noopener">@ksrtecnologia</a></span></div>
@@ -799,6 +814,15 @@ if(GOOGLE_PLACES.apiKey&&GOOGLE_PLACES.placeId){
   addEventListener("resize",paint);
   new MutationObserver(paint).observe(t,{childList:true});
   paint();reset();
+})();
+
+// capa: fotos alternando
+(function(){
+  const box=document.getElementById("heroSlides");if(!box)return;
+  const imgs=[...box.querySelectorAll("img")],dots=[...box.querySelectorAll(".sl-dots button")];let i=0,t;
+  function go(n){i=(n+imgs.length)%imgs.length;imgs.forEach((im,k)=>im.classList.toggle("on",k===i));dots.forEach((d,k)=>d.classList.toggle("on",k===i))}
+  function play(){clearInterval(t);t=setInterval(()=>go(i+1),5000)}
+  dots.forEach((d,k)=>d.onclick=()=>{go(k);play()});play();
 })();
 
 // ===== Perguntas frequentes =====
