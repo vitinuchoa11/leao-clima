@@ -10,7 +10,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Leão Clima">
 <meta property="og:title" content="Leão Clima | Ar-condicionado em Brasília">
-<meta property="og:description" content="O gelo que você precisa, a qualidade que merece. Instalação, limpeza e manutenção de ar-condicionado em toda Brasília.">
+<meta property="og:description" content="O gelo que você precisa, a qualidade que merece. Instalação, limpeza e manutenção de ar-condicionado em Brasília e regiões.">
 <meta property="og:image" content="https://leaoclimabsb.com.br/img/og.jpg">
 <meta property="og:url" content="https://leaoclimabsb.com.br/">
 <link rel="canonical" href="https://leaoclimabsb.com.br/">
@@ -83,7 +83,7 @@ header .btn{padding:11px 18px;font-size:14px}
 .badge{display:inline-flex;align-items:center;gap:9px;background:rgba(156,200,255,.12);border:1px solid rgba(156,200,255,.3);color:#dbeaff;padding:8px 16px;border-radius:99px;font-size:13px;font-weight:600}
 .badge svg{width:16px;height:16px;color:var(--ice)}
 .hero h1{color:#fff;font-size:clamp(34px,4.3vw,54px);font-weight:800;margin:24px 0 22px}
-.hero h1 span{background:linear-gradient(90deg,#8fc3ff,#5b8cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 span.grad{background:linear-gradient(90deg,#8fc3ff,#5b8cff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p.lead{font-size:18px;color:#c5d3ee;max-width:520px}
 .hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
 .trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;font-size:14px;color:#c5d3ee}
@@ -367,6 +367,30 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
 .ig-feed span:hover::after{background:linear-gradient(45deg,rgba(225,48,108,.35),rgba(131,58,180,.35))}
 @media (max-width:980px){.rv-wrap,.ig-grid{grid-template-columns:1fr}.ig-grid{gap:34px}}
 @media (max-width:640px){.rv-track .rv{flex-basis:88%}.rv-big{font-size:60px}}
+
+/* v3 */
+.ig-sec{background:#fff;padding:0 0 70px;border:0}
+.ig-bar{display:flex;align-items:center;gap:20px;padding:22px 26px;border-radius:20px;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(45deg,#f9a825,#e1306c 45%,#833ab4) border-box;border:2px solid transparent;max-width:900px;margin:0 auto}
+.ig-ic{width:52px;height:52px;border-radius:15px;background:linear-gradient(45deg,#f9a825,#e1306c 45%,#833ab4);color:#fff;display:grid;place-items:center;flex-shrink:0}
+.ig-ic svg{width:26px;height:26px}
+.ig-txt{flex:1}.ig-txt b{display:block;font-family:Montserrat,sans-serif;color:var(--ink);font-size:18px}.ig-txt span{font-size:14.5px}
+.btn-ig{background:linear-gradient(45deg,#f9a825,#e1306c 45%,#833ab4);color:#fff;box-shadow:0 14px 30px -12px rgba(225,48,108,.6);white-space:nowrap}
+.btn-ig svg{width:20px;height:20px}
+.area{position:relative}.anchor{position:absolute;top:0}
+.area-box{display:grid;grid-template-columns:.85fr 1.15fr;background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(11,30,80,.35)}
+.area-box .loc-card{border:0;border-radius:0;padding:34px;gap:20px;justify-content:center}
+.area-box .map{border-radius:0;min-height:340px;border:0}
+.area-box .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.loc-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}.loc-btns .btn{justify-content:center;padding-left:12px;padding-right:12px;font-size:14.5px}
+.btn-ghost-b{background:var(--ice-2);color:var(--royal)}
+.btn-ghost-b:hover{background:#c9defd}
+.area-regions{grid-column:1/-1;border-top:1px solid var(--line);padding:30px 34px;background:var(--bg)}
+.area-regions h3{display:flex;align-items:center;gap:9px;font-size:17px;margin-bottom:16px;color:var(--ink)}
+.area-regions h3 svg{width:20px;height:20px;color:var(--royal)}
+.area-regions .region-list li{background:#fff}
+.credit a[target]{color:var(--ice);font-weight:600}
+@media (max-width:980px){.area-box{grid-template-columns:1fr}}
+@media (max-width:640px){.loc-btns{grid-template-columns:1fr}.ig-bar{flex-direction:column;text-align:center}.area-box .loc-card,.area-regions{padding:24px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "De quanto em quanto tempo devo limpar o ar-condicionado?", "acceptedAnswer": {"@type": "Answer", "text": "Para uso residencial, o recomendado é limpar os filtros a cada 15 dias e fazer a higienização completa a cada 6 meses. Em comércios e ambientes de uso intenso, o intervalo deve ser menor."}}, {"@type": "Question", "name": "Quais são os sinais de que o aparelho precisa de limpeza?", "acceptedAnswer": {"@type": "Answer", "text": "Cheiro de mofo ao ligar, água pingando, barulho diferente, sujeira aparente nas aletas ou o ar gelando menos do que antes."}}, {"@type": "Question", "name": "Vocês instalam aparelhos comprados em loja?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Fazemos a instalação de aparelhos novos de todas as principais marcas, com acabamento limpo e seguindo as orientações do fabricante."}}, {"@type": "Question", "name": "Quais marcas vocês atendem?", "acceptedAnswer": {"@type": "Answer", "text": "Trabalhamos com Samsung, LG, Springer, Elgin, Philco, Gree, Midea, Electrolux, Hisense e outras marcas. Informe o modelo no pedido de orçamento."}}, {"@type": "Question", "name": "Preciso estar em casa durante o serviço?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. É preciso que um adulto acompanhe o atendimento e libere o acesso ao aparelho."}}, {"@type": "Question", "name": "O serviço tem garantia?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Os serviços da Leão Clima têm garantia, e o prazo é informado junto com o orçamento."}}, {"@type": "Question", "name": "Como funciona o orçamento?", "acceptedAnswer": {"@type": "Answer", "text": "Envie pelo WhatsApp o serviço desejado, a quantidade de aparelhos e o seu bairro. Respondemos com os valores e o melhor horário para o atendimento."}}, {"@type": "Question", "name": "Quais regiões vocês atendem?", "acceptedAnswer": {"@type": "Answer", "text": "Atendemos Brasília e as regiões administrativas do DF, como Asa Sul, Asa Norte, Águas Claras, Guará, Taguatinga, Lago Sul e muitas outras."}}, {"@type": "Question", "name": "Qual é o horário de atendimento?", "acceptedAnswer": {"@type": "Answer", "text": "De segunda a sexta, das 8h às 18h, e aos sábados, das 8h às 13h. Aos domingos estamos fechados, mas você pode mandar sua mensagem no WhatsApp."}}]}</script>
@@ -428,7 +452,7 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
   <div class="container">
     <div class="reveal">
       <span class="badge"><svg><use href="#i-snow"/></svg>O gelo que você precisa, a qualidade que merece.</span>
-      <h1>Seu ar-condicionado gelando de verdade, <span>em toda Brasília.</span></h1>
+      <h1>Seu <span class="nw">ar-condicionado</span> <span class="grad">gelando como novo.</span></h1>
       <p class="lead">Instalação, limpeza e manutenção com acabamento caprichado. Orçamento rápido pelo WhatsApp.</p>
       <div class="actions">
         <a href="#orcamento" class="btn btn-primary">Pedir orçamento <svg><use href="#i-arrow"/></svg></a>
@@ -437,7 +461,7 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
       <div class="trust">
         <span><svg><use href="#i-shield"/></svg>Serviço com garantia</span>
         <span><svg><use href="#i-check"/></svg>Brasília e regiões</span>
-        <span><svg><use href="#i-check"/></svg>Segunda a sábado</span>
+        <span><svg><use href="#i-check"/></svg>Orçamento sem compromisso</span>
       </div>
     </div>
     <div class="hero-photo reveal">
@@ -521,7 +545,7 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
     <div class="eff-grid">
       <div class="eff-card reveal"><div class="ic"><svg><use href="#i-star"/></svg></div><h3>Nota 5,0 no Google</h3><p>Todos os clientes que avaliaram deram 5 estrelas, elogiando o capricho, a pontualidade e o atendimento.</p></div>
       <div class="eff-card reveal"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Serviço com garantia</h3><p>Trabalho profissional e organizado, com garantia. A sua satisfação é a marca da Leão Clima.</p></div>
-      <div class="eff-card reveal"><div class="ic"><svg><use href="#i-clock"/></svg></div><h3>De segunda a sábado</h3><p>Atendemos de segunda a sexta, das 8h às 18h, e aos sábados, das 8h às 13h. Fale direto com a gente pelo WhatsApp.</p></div>
+      <div class="eff-card reveal"><div class="ic"><svg><use href="#i-wa"/></svg></div><h3>Orçamento rápido</h3><p>Mande uma mensagem no WhatsApp com o serviço e o seu bairro e receba os valores sem compromisso.</p></div>
     </div>
   </div>
 </section>
@@ -580,22 +604,13 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
   </div>
 </section>
 
-<section class="section ig-sec" id="instagram">
-  <div class="container ig-grid">
-    <div class="reveal">
-      <span class="eyebrow"><svg><use href="#i-ig"/></svg>Instagram</span>
-      <h2>Acompanhe a Leão Clima <span class="accent">no Instagram</span></h2>
-      <p>Instalações, limpezas e dicas do dia a dia. Siga <b>@leaoclima.ar</b> e veja nossos trabalhos de perto.</p>
+<section class="ig-sec" id="instagram">
+  <div class="container">
+    <div class="ig-bar reveal">
+      <span class="ig-ic"><svg><use href="#i-ig"/></svg></span>
+      <div class="ig-txt"><b>Acompanhe a Leão Clima no Instagram</b><span>Trabalhos, limpezas e dicas no dia a dia.</span></div>
       <a class="btn btn-ig" href="https://www.instagram.com/leaoclima.ar/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Seguir @leaoclima.ar</a>
     </div>
-    <a class="ig-feed reveal" href="https://www.instagram.com/leaoclima.ar/" target="_blank" rel="noopener" aria-label="Abrir o Instagram da Leão Clima">
-      <span><img src="img/hisense-sala-p.jpg" alt="" loading="lazy"></span>
-      <span><img src="img/elgin-higienizacao-p.jpg" alt="" loading="lazy"></span>
-      <span><img src="img/hisense-painel-madeira-p.jpg" alt="" loading="lazy"></span>
-      <span><img src="img/condensadora-gree-p.jpg" alt="" loading="lazy"></span>
-      <span><img src="img/elgin-banheiro-p.jpg" alt="" loading="lazy"></span>
-      <span><img src="img/hisense-detalhe-p.jpg" alt="" loading="lazy"></span>
-    </a>
   </div>
 </section>
 
@@ -610,18 +625,6 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
       <div class="tip reveal"><span class="n">02</span><h3>Filtro limpo, ar limpo</h3><p>Limpe os filtros a cada 15 dias e faça a higienização completa a cada 6 meses. Em uso intenso, o intervalo deve ser menor.</p></div>
       <div class="tip reveal"><span class="n">03</span><h3>23°C é o ponto certo</h3><p>Essa é a temperatura recomendada para ficar confortável sem pesar na conta de luz. Feche portas e janelas com o ar ligado.</p></div>
     </div>
-  </div>
-</section>
-
-<section class="section regions" id="regioes">
-  <div class="container regions-grid">
-    <div class="reveal">
-      <span class="eyebrow"><svg><use href="#i-pin"/></svg>Onde atendemos</span>
-      <h2>Ar-condicionado em <span class="accent">Brasília e regiões</span></h2>
-      <p>Saímos da Asa Sul e vamos até você, em casa, no apartamento ou na empresa. Não achou sua região? Chame no WhatsApp: provavelmente atendemos também.</p>
-      <a href="https://wa.me/5561992929408?text=Ol%C3%A1!%20Voc%C3%AAs%20atendem%20na%20minha%20regi%C3%A3o%3F" target="_blank" rel="noopener" class="btn btn-primary"><svg><use href="#i-wa"/></svg>Consultar minha região</a>
-    </div>
-    <ul class="region-list reveal"><li>Asa Sul</li><li>Asa Norte</li><li>Sudoeste</li><li>Noroeste</li><li>Octogonal</li><li>Cruzeiro</li><li>Lago Sul</li><li>Lago Norte</li><li>Park Way</li><li>Guará</li><li>Águas Claras</li><li>Taguatinga</li><li>Vicente Pires</li><li>Arniqueira</li><li>Núcleo Bandeirante</li><li>Candangolândia</li><li>Riacho Fundo</li><li>Jardim Botânico</li><li>São Sebastião</li><li>Paranoá</li><li>Itapoã</li><li>Varjão</li><li>Sobradinho</li><li>Planaltina</li><li>Ceilândia</li><li>Samambaia</li><li>Recanto das Emas</li><li>Gama</li><li>Santa Maria</li><li>Estrutural</li><li>Brazlândia</li><li class="more">e outras regiões do DF</li></ul>
   </div>
 </section>
 
@@ -642,7 +645,7 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
     <div class="reveal">
       <span class="eyebrow"><svg><use href="#i-snow"/></svg>Orçamento rápido</span>
       <h2>Vamos deixar seu ambiente geladinho?</h2>
-      <p class="lead">Preencha o formulário e sua mensagem chega pronta no nosso WhatsApp. Respondemos no horário de atendimento: seg a sex, 8h–18h, e sáb, 8h–13h.</p>
+      <p class="lead">Preencha o formulário e sua mensagem chega pronta no nosso WhatsApp.</p>
       <div class="contact-lines">
         <a href="https://wa.me/5561992929408" target="_blank" rel="noopener"><span class="ic wa"><svg><use href="#i-wa"/></svg></span><span><small>WhatsApp</small>(61) 99292-9408</span></a>
         <a href="https://www.instagram.com/leaoclima.ar/" target="_blank" rel="noopener"><span class="ic"><svg><use href="#i-ig"/></svg></span><span><small>Instagram</small>@leaoclima.ar</span></a>
@@ -666,18 +669,30 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
   </div>
 </section>
 
-<section class="section" id="localizacao">
-  <div class="container loc-grid">
-    <div class="loc-card reveal">
-      <span class="eyebrow"><svg><use href="#i-pin"/></svg>Localização</span>
-      <h2>Estamos na Asa Sul e atendemos toda Brasília</h2>
-      <div class="loc-item"><div class="ic"><svg><use href="#i-map"/></svg></div><div><b>Endereço</b><span>SHIGS 711 Bloco K Casa 30 · Asa Sul, Brasília - DF</span></div></div>
-      <div class="loc-item"><div class="ic"><svg><use href="#i-clock"/></svg></div><div><b>Horário</b><span>Seg a Sex: 8h às 18h · Sáb: 8h às 13h · Dom: fechado</span></div></div>
-      <div class="loc-item"><div class="ic"><svg><use href="#i-pin"/></svg></div><div><b>Área de atendimento</b><span>Brasília e regiões do DF</span></div></div>
-      <div class="loc-item"><div class="ic"><svg><use href="#i-wa"/></svg></div><div><b>Contato</b><span>(61) 99292-9408</span></div></div>
-      <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=-15.8171732,-47.9156096" target="_blank" rel="noopener"><svg><use href="#i-nav"/></svg>Abrir no GPS</a>
+<section class="section area" id="regioes">
+  <span id="localizacao" class="anchor"></span>
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow"><svg><use href="#i-pin"/></svg>Onde atendemos</span>
+      <h2>Estamos na Asa Sul e atendemos <span class="accent">Brasília e regiões</span></h2>
+      <p>Vamos até você, em casa, no apartamento ou na empresa.</p>
     </div>
-    <div class="map reveal"><iframe title="Mapa da Leão Clima na Asa Sul" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=-15.8171732,-47.9156096&z=16&output=embed"></iframe></div>
+    <div class="area-box reveal">
+      <div class="loc-card">
+        <div class="loc-item"><div class="ic"><svg><use href="#i-map"/></svg></div><div><b>Endereço</b><span>SHIGS 711 Bloco K Casa 30 · Asa Sul, Brasília - DF</span></div></div>
+        <div class="loc-item"><div class="ic"><svg><use href="#i-clock"/></svg></div><div><b>Horário</b><span>Seg a Sex: 8h às 18h · Sáb: 8h às 13h · Dom: fechado</span></div></div>
+        <div class="loc-item"><div class="ic"><svg><use href="#i-wa"/></svg></div><div><b>Contato</b><span>(61) 99292-9408</span></div></div>
+        <div class="loc-btns">
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=-15.8171732,-47.9156096" target="_blank" rel="noopener"><svg><use href="#i-nav"/></svg>Abrir no GPS</a>
+          <a class="btn btn-ghost-b" href="https://wa.me/5561992929408?text=Ol%C3%A1!%20Voc%C3%AAs%20atendem%20na%20minha%20regi%C3%A3o%3F" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Consultar minha região</a>
+        </div>
+      </div>
+      <div class="map"><iframe title="Mapa da Leão Clima na Asa Sul" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=-15.8171732,-47.9156096&z=15&output=embed"></iframe></div>
+      <div class="area-regions">
+        <h3><svg><use href="#i-pin"/></svg>Regiões atendidas</h3>
+        <ul class="region-list"><li>Asa Sul</li><li>Asa Norte</li><li>Sudoeste</li><li>Noroeste</li><li>Octogonal</li><li>Cruzeiro</li><li>Lago Sul</li><li>Lago Norte</li><li>Park Way</li><li>Guará</li><li>Águas Claras</li><li>Taguatinga</li><li>Vicente Pires</li><li>Arniqueira</li><li>Núcleo Bandeirante</li><li>Candangolândia</li><li>Riacho Fundo</li><li>Jardim Botânico</li><li>São Sebastião</li><li>Paranoá</li><li>Itapoã</li><li>Varjão</li><li>Sobradinho</li><li>Planaltina</li><li>Ceilândia</li><li>Samambaia</li><li>Recanto das Emas</li><li>Gama</li><li>Santa Maria</li><li>Estrutural</li><li>Brazlândia</li><li class="more">e outras regiões do DF</li></ul>
+      </div>
+    </div>
   </div>
 </section>
 </main>
@@ -693,7 +708,7 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
       <div><h4>Navegação</h4><ul><li><a href="#servicos">Serviços</a></li><li><a href="#limpeza">Higienização</a></li><li><a href="#trabalhos">Trabalhos realizados</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#regioes">Onde atendemos</a></li><li><a href="#duvidas">Perguntas frequentes</a></li><li><a href="#orcamento">Orçamento</a></li></ul></div>
       <div><h4>Contato</h4><a class="phone" href="https://wa.me/5561992929408" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>(61) 99292-9408</a><p style="margin-top:12px">SHIGS 711 Bloco K Casa 30<br>Asa Sul, Brasília - DF</p><p style="margin-top:12px">Seg a Sex: 8h às 18h<br>Sáb: 8h às 13h · Dom: fechado</p></div>
     </div>
-    <div class="copy"><span>© 2026 Leão Clima · Brasília - DF. Todos os direitos reservados.</span><span><a href="privacidade.html">Política de Privacidade</a></span></div>
+    <div class="copy"><span>© 2026 Leão Clima · Brasília - DF. Todos os direitos reservados.</span><span class="credit"><a href="privacidade.html">Política de Privacidade</a> · Site feito por <a href="https://www.instagram.com/ksrtecnologia/" target="_blank" rel="noopener">@ksrtecnologia</a></span></div>
   </div>
 </footer>
 
