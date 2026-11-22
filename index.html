@@ -90,8 +90,8 @@ header .btn{padding:11px 18px;font-size:14px}
 .trust span{display:flex;align-items:center;gap:8px}
 .trust svg{width:18px;height:18px;color:var(--ice)}
 .hero-photo{position:relative}
-.hero-photo .frame{border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:0 40px 80px -30px rgba(0,0,0,.6);aspect-ratio:4/4.3}
-.hero-photo .frame img{width:100%;height:100%;object-fit:cover}
+.hero-photo .frame{border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:0 40px 80px -30px rgba(0,0,0,.6);aspect-ratio:4/3.4}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:62% center}
 .float{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:14px 18px;display:flex;gap:12px;align-items:center;box-shadow:0 24px 40px -18px rgba(0,0,0,.45)}
 .float .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--ice-2);color:var(--royal);flex-shrink:0}
 .float .ic svg{width:22px;height:22px}
@@ -325,6 +325,48 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
   .gallery{grid-auto-rows:150px}
   .fact{flex-direction:column;gap:10px}
 }
+
+/* títulos: não quebrar "ar-condicionado" */
+.nw{white-space:nowrap}
+/* avaliações v2 */
+.rv-sec{background:linear-gradient(180deg,var(--bg) 0%,#fff 100%)}
+.rv-wrap{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:stretch}
+.rv-panel{background:radial-gradient(120% 90% at 100% 0%,#1a3f9e 0%,var(--navy) 55%,var(--deep) 100%);color:#c5d3ee;border-radius:22px;padding:32px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;box-shadow:0 30px 60px -30px rgba(6,18,47,.6)}
+.rv-g{display:flex;align-items:center;gap:10px;background:#fff;color:var(--ink);border-radius:99px;padding:8px 16px 8px 10px;font-size:13px;font-weight:700;margin-bottom:14px}
+.rv-g svg{width:22px;height:22px}
+.rv-big{font-family:Montserrat,sans-serif;font-size:72px;line-height:1;color:#fff;font-weight:800}
+.rv-panel .stars{font-size:22px;letter-spacing:4px}
+.rv-panel p{color:#c5d3ee;font-size:14.5px;margin:6px 0 20px}
+.rv-panel .btn{width:100%;justify-content:center}
+.rv-write{margin-top:12px;font-size:13px;color:var(--ice);text-decoration:underline;font-weight:600}
+.rv-car{min-width:0;display:flex;flex-direction:column}
+.rv-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 6px;flex:1}
+.rv-track::-webkit-scrollbar{display:none}
+.rv-track .rv{flex:0 0 calc((100% - 20px)/2);scroll-snap-align:start;margin:0;border-radius:20px;padding:26px;box-shadow:0 18px 40px -28px rgba(11,30,80,.35);position:relative}
+.rv-track .rv::after{content:"\201D";position:absolute;right:22px;bottom:-8px;font-family:Georgia,serif;font-size:96px;line-height:1;color:var(--ice-2);pointer-events:none}
+.rv-track .rv p{display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden;position:relative;z-index:1}
+.rv-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
+.rv-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--royal);display:grid;place-items:center;cursor:pointer;transition:.2s}
+.rv-btn:hover{background:var(--royal);color:#fff;border-color:var(--royal)}
+.rv-btn svg{width:20px;height:20px}
+.rv-dots{display:flex;gap:8px}
+.rv-dots button{width:8px;height:8px;border-radius:99px;border:0;background:#c3d3ee;cursor:pointer;padding:0;transition:.25s}
+.rv-dots button.on{width:26px;background:var(--royal)}
+/* instagram */
+.ig-sec{background:#fff;border-top:1px solid var(--line)}
+.ig-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.ig-sec h2{font-size:clamp(30px,3.6vw,44px);margin:14px 0 16px}
+.ig-sec p{margin-bottom:28px;max-width:430px}
+.btn-ig{background:linear-gradient(45deg,#f9a825,#e1306c 45%,#833ab4);color:#fff;box-shadow:0 14px 30px -12px rgba(225,48,108,.6)}
+.btn-ig svg{width:20px;height:20px}
+.ig-feed{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ig-feed span{aspect-ratio:1;border-radius:14px;overflow:hidden;position:relative}
+.ig-feed img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ig-feed span::after{content:"";position:absolute;inset:0;background:linear-gradient(45deg,rgba(225,48,108,.0),rgba(131,58,180,.0));transition:.3s}
+.ig-feed:hover img{transform:scale(1.06)}
+.ig-feed span:hover::after{background:linear-gradient(45deg,rgba(225,48,108,.35),rgba(131,58,180,.35))}
+@media (max-width:980px){.rv-wrap,.ig-grid{grid-template-columns:1fr}.ig-grid{gap:34px}}
+@media (max-width:640px){.rv-track .rv{flex-basis:88%}.rv-big{font-size:60px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "De quanto em quanto tempo devo limpar o ar-condicionado?", "acceptedAnswer": {"@type": "Answer", "text": "Para uso residencial, o recomendado é limpar os filtros a cada 15 dias e fazer a higienização completa a cada 6 meses. Em comércios e ambientes de uso intenso, o intervalo deve ser menor."}}, {"@type": "Question", "name": "Quais são os sinais de que o aparelho precisa de limpeza?", "acceptedAnswer": {"@type": "Answer", "text": "Cheiro de mofo ao ligar, água pingando, barulho diferente, sujeira aparente nas aletas ou o ar gelando menos do que antes."}}, {"@type": "Question", "name": "Vocês instalam aparelhos comprados em loja?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Fazemos a instalação de aparelhos novos de todas as principais marcas, com acabamento limpo e seguindo as orientações do fabricante."}}, {"@type": "Question", "name": "Quais marcas vocês atendem?", "acceptedAnswer": {"@type": "Answer", "text": "Trabalhamos com Samsung, LG, Springer, Elgin, Philco, Gree, Midea, Electrolux, Hisense e outras marcas. Informe o modelo no pedido de orçamento."}}, {"@type": "Question", "name": "Preciso estar em casa durante o serviço?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. É preciso que um adulto acompanhe o atendimento e libere o acesso ao aparelho."}}, {"@type": "Question", "name": "O serviço tem garantia?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Os serviços da Leão Clima têm garantia, e o prazo é informado junto com o orçamento."}}, {"@type": "Question", "name": "Como funciona o orçamento?", "acceptedAnswer": {"@type": "Answer", "text": "Envie pelo WhatsApp o serviço desejado, a quantidade de aparelhos e o seu bairro. Respondemos com os valores e o melhor horário para o atendimento."}}, {"@type": "Question", "name": "Quais regiões vocês atendem?", "acceptedAnswer": {"@type": "Answer", "text": "Atendemos Brasília e as regiões administrativas do DF, como Asa Sul, Asa Norte, Águas Claras, Guará, Taguatinga, Lago Sul e muitas outras."}}, {"@type": "Question", "name": "Qual é o horário de atendimento?", "acceptedAnswer": {"@type": "Answer", "text": "De segunda a sexta, das 8h às 18h, e aos sábados, das 8h às 13h. Aos domingos estamos fechados, mas você pode mandar sua mensagem no WhatsApp."}}]}</script>
@@ -393,15 +435,13 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
         <a href="https://wa.me/5561992929408?text=Ol%C3%A1%2C%20Le%C3%A3o%20Clima!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn btn-ghost"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
       </div>
       <div class="trust">
-        <span><svg><use href="#i-google"/></svg>Nota 5,0 no Google</span>
+        <span><svg><use href="#i-shield"/></svg>Serviço com garantia</span>
         <span><svg><use href="#i-check"/></svg>Brasília e regiões</span>
         <span><svg><use href="#i-check"/></svg>Segunda a sábado</span>
       </div>
     </div>
     <div class="hero-photo reveal">
-      <div class="frame"><img src="img/hisense-quarto.jpg" alt="Ar-condicionado Hisense Inverter instalado pela Leão Clima em quarto com painel ripado" width="1200" height="900" fetchpriority="high"></div>
-      <div class="float f1"><div class="ic"><svg><use href="#i-snow"/></svg></div><div><small>Instalação profissional</small><b>Acabamento limpo</b></div></div>
-      <a class="float f2" href="#avaliacoes"><svg style="width:30px;height:30px"><use href="#i-google"/></svg><div><b>5,0 <span class="stars">★★★★★</span></b><small><span data-rv-count>10</span> avaliações no Google</small></div></a>
+      <div class="frame"><img src="img/hero-conforto.jpg" srcset="img/hero-conforto-p.jpg 800w, img/hero-conforto.jpg 1400w" sizes="(max-width:980px) 100vw, 560px" alt="Mulher relaxando no sofá com o ar-condicionado ligado a 22 graus" width="1400" height="933" fetchpriority="high"></div>
     </div>
   </div>
 </section>
@@ -418,8 +458,8 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
   <div class="container">
     <div class="head reveal">
       <span class="eyebrow"><svg><use href="#i-snow"/></svg>Nossos serviços</span>
-      <h2>Instalação, limpeza e manutenção de ar-condicionado <span class="accent">em Brasília</span></h2>
-      <p>Da instalação à limpeza de rotina, cuidamos do seu aparelho para ele gelar bem, gastar menos e durar mais.</p>
+      <h2>Tudo o que o seu <span class="accent nw">ar-condicionado</span> precisa</h2>
+      <p>Instalação, limpeza e manutenção em Brasília: da instalação à limpeza de rotina, cuidamos do seu aparelho para ele gelar bem, gastar menos e durar mais.</p>
     </div>
     <div class="services">
       <article class="card reveal">
@@ -461,7 +501,7 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
     </div>
     <div class="reveal">
       <span class="eyebrow"><svg><use href="#i-drop"/></svg>O poder da limpeza</span>
-      <h2>Limpeza e higienização de ar-condicionado <span class="accent">com resultado real</span></h2>
+      <h2>Limpeza e higienização de <span class="nw">ar-condicionado</span> <span class="accent">com resultado real</span></h2>
       <p>Filtro sujo é ar sujo. Com a limpeza em dia, o aparelho volta a respirar e você sente a diferença no conforto e na conta de luz.</p>
       <div class="benefits">
         <div class="benefit"><div class="ic"><svg><use href="#i-wind"/></svg></div><div><h3>Ar sempre puro</h3><p>Remove o acúmulo de fungos, ácaros e bactérias que fica dentro do aparelho.</p></div></div>
@@ -512,21 +552,50 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
   <button class="lb-btn lb-next" aria-label="Próxima"><svg><use href="#i-right"/></svg></button>
 </div>
 
-<section class="section" id="avaliacoes" style="padding-top:20px">
+<section class="section rv-sec" id="avaliacoes">
   <div class="container">
-    <div class="rv-head reveal">
-      <div>
-        <span class="eyebrow"><svg><use href="#i-snow"/></svg>Avaliações</span>
-        <h2>O que os clientes dizem <span class="accent">no Google</span></h2>
-      </div>
-      <div class="rv-score">
-        <svg class="g"><use href="#i-google"/></svg>
-        <div><b data-rv-rating>5,0</b><span class="stars">★★★★★</span><small><span data-rv-count>10</span> avaliações no Google</small></div>
-        <a class="btn btn-primary" href="https://www.google.com/maps/place/Leao+clima/@-15.8194251,-47.9218734,14z/data=!4m8!3m7!1s0xa24a8c31a38adf2b:0x9d6f394f2575c3e6!8m2!3d-15.819426!4d-47.9012308!9m1!1b1!16s%2Fg%2F11zh98s362?hl=pt-br" target="_blank" rel="noopener">Ver no Google</a>
+    <div class="head reveal">
+      <span class="eyebrow"><svg><use href="#i-star"/></svg>Avaliações</span>
+      <h2>O que nossos clientes dizem <span class="accent">no Google</span></h2>
+      <p>Opiniões reais de quem já chamou a Leão Clima, publicadas no Google Maps.</p>
+    </div>
+    <div class="rv-wrap reveal">
+      <aside class="rv-panel">
+        <div class="rv-g"><svg><use href="#i-google"/></svg><span>Avaliações do Google</span></div>
+        <b class="rv-big" data-rv-rating>5,0</b>
+        <span class="stars">★★★★★</span>
+        <p>Nota máxima em <span data-rv-count>10</span> avaliações</p>
+        <a class="btn btn-primary" href="https://www.google.com/maps/place/Leao+clima/@-15.8194251,-47.9218734,14z/data=!4m8!3m7!1s0xa24a8c31a38adf2b:0x9d6f394f2575c3e6!8m2!3d-15.819426!4d-47.9012308!9m1!1b1!16s%2Fg%2F11zh98s362?hl=pt-br" target="_blank" rel="noopener">Ver todas no Google</a>
+        <a class="rv-write" href="https://www.google.com/maps/place/Leao+clima/@-15.8194251,-47.9218734,14z/data=!4m8!3m7!1s0xa24a8c31a38adf2b:0x9d6f394f2575c3e6!8m2!3d-15.819426!4d-47.9012308!9m1!1b1!16s%2Fg%2F11zh98s362?hl=pt-br" target="_blank" rel="noopener">Já foi atendido? Deixe a sua avaliação</a>
+      </aside>
+      <div class="rv-car">
+        <div class="rv-track" id="rvGrid"></div>
+        <div class="rv-nav">
+          <button class="rv-btn" id="rvPrev" aria-label="Avaliação anterior"><svg><use href="#i-left"/></svg></button>
+          <div class="rv-dots" id="rvDots"></div>
+          <button class="rv-btn" id="rvNext" aria-label="Próxima avaliação"><svg><use href="#i-right"/></svg></button>
+        </div>
       </div>
     </div>
-    <div class="rv-grid" id="rvGrid"></div>
-    <p class="rv-note">Avaliações publicadas por clientes no Google Maps. <a href="https://www.google.com/maps/place/Leao+clima/@-15.8194251,-47.9218734,14z/data=!4m8!3m7!1s0xa24a8c31a38adf2b:0x9d6f394f2575c3e6!8m2!3d-15.819426!4d-47.9012308!9m1!1b1!16s%2Fg%2F11zh98s362?hl=pt-br" target="_blank" rel="noopener">Já foi atendido? Deixe a sua avaliação.</a></p>
+  </div>
+</section>
+
+<section class="section ig-sec" id="instagram">
+  <div class="container ig-grid">
+    <div class="reveal">
+      <span class="eyebrow"><svg><use href="#i-ig"/></svg>Instagram</span>
+      <h2>Acompanhe a Leão Clima <span class="accent">no Instagram</span></h2>
+      <p>Instalações, limpezas e dicas do dia a dia. Siga <b>@leaoclima.ar</b> e veja nossos trabalhos de perto.</p>
+      <a class="btn btn-ig" href="https://www.instagram.com/leaoclima.ar/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Seguir @leaoclima.ar</a>
+    </div>
+    <a class="ig-feed reveal" href="https://www.instagram.com/leaoclima.ar/" target="_blank" rel="noopener" aria-label="Abrir o Instagram da Leão Clima">
+      <span><img src="img/hisense-sala-p.jpg" alt="" loading="lazy"></span>
+      <span><img src="img/elgin-higienizacao-p.jpg" alt="" loading="lazy"></span>
+      <span><img src="img/hisense-painel-madeira-p.jpg" alt="" loading="lazy"></span>
+      <span><img src="img/condensadora-gree-p.jpg" alt="" loading="lazy"></span>
+      <span><img src="img/elgin-banheiro-p.jpg" alt="" loading="lazy"></span>
+      <span><img src="img/hisense-detalhe-p.jpg" alt="" loading="lazy"></span>
+    </a>
   </div>
 </section>
 
@@ -534,7 +603,7 @@ footer .ig-link svg{width:19px;height:19px;color:#ff7ab6}
   <div class="container">
     <div class="head reveal">
       <span class="eyebrow"><svg><use href="#i-bulb"/></svg>Dicas da Leão Clima</span>
-      <h2>Como cuidar do seu <span class="accent">ar-condicionado</span></h2>
+      <h2>Como cuidar do seu <span class="accent nw">ar-condicionado</span></h2>
     </div>
     <div class="tips">
       <div class="tip reveal"><span class="n">01</span><h3>Fique de olho nos sinais</h3><p>Cheiro de mofo, água pingando, barulho diferente ou gelando pouco: é hora de chamar uma higienização ou manutenção.</p></div>
@@ -695,6 +764,27 @@ if(GOOGLE_PLACES.apiKey&&GOOGLE_PLACES.placeId){
     renderAvaliacoes([...novas,...AVALIACOES.filter(a=>!nomes.has(a.nome.toLowerCase()))]);
   }).catch(()=>{});
 }
+
+// carrossel das avaliações
+(function(){
+  const t=document.getElementById("rvGrid"),dots=document.getElementById("rvDots");
+  let timer;
+  function cards(){return [...t.children]}
+  function step(){return cards()[0]?cards()[0].offsetWidth+20:300}
+  function pages(){return Math.max(1,Math.round((t.scrollWidth-t.clientWidth)/step())+1)}
+  function cur(){return Math.round(t.scrollLeft/step())}
+  function go(i){const n=pages();i=(i+n)%n;t.scrollTo({left:i*step()})}
+  function paint(){const n=pages();if(dots.children.length!==n){dots.innerHTML="";for(let i=0;i<n;i++){const b=document.createElement("button");b.setAttribute("aria-label","Ir para avaliação "+(i+1));b.onclick=()=>{go(i);reset()};dots.appendChild(b)}}
+    [...dots.children].forEach((b,i)=>b.classList.toggle("on",i===Math.min(cur(),n-1)))}
+  function reset(){clearInterval(timer);timer=setInterval(()=>go(cur()+1),6000)}
+  document.getElementById("rvPrev").onclick=()=>{go(cur()-1);reset()};
+  document.getElementById("rvNext").onclick=()=>{go(cur()+1);reset()};
+  t.addEventListener("scroll",()=>requestAnimationFrame(paint),{passive:true});
+  t.addEventListener("mouseenter",()=>clearInterval(timer));t.addEventListener("mouseleave",reset);
+  addEventListener("resize",paint);
+  new MutationObserver(paint).observe(t,{childList:true});
+  paint();reset();
+})();
 
 // ===== Perguntas frequentes =====
 document.querySelectorAll(".qa button").forEach(b=>b.addEventListener("click",()=>{
