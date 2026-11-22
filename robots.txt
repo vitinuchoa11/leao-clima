@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vitinuchoa11.github.io/leao-clima/sitemap.xml
